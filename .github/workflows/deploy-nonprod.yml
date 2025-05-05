@@ -31,10 +31,14 @@ jobs:
           docker tag goep-dev-nonprod:latest 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
           docker push 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
 
+      - name: Create imagedefinitions.json
+        run: |
+          echo '[{"name":"goep-dev-nonprod-container","imageUri":"026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest"}]' > imagedefinitions.json
+
       - name: Deploy to ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
-          task-definition: goep-dev-nonprod-task
+          task-definition: imagedefinitions.json
           service: goep-dev-nonprod-service
           cluster: goep-dev-cluster
           wait-for-service-stability: true
