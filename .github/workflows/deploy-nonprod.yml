@@ -1,0 +1,40 @@
+name: Deploy to ECS (Nonprod)
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    name: Build & Deploy to ECS Nonprod
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Log in to Amazon ECR
+        run: |
+          aws ecr get-login-password | docker login --username AWS --password-stdin 026180161331.dkr.ecr.us-east-1.amazonaws.com
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t goep-dev-nonprod .
+          docker tag goep-dev-nonprod:latest 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
+          docker push 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
+
+      - name: Deploy to ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: goep-dev-nonprod-task
+          service: goep-dev-nonprod-service
+          cluster: goep-dev-cluster
+          wait-for-service-stability: true

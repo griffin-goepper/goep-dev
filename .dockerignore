@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+Dockerfile
+README.md
+pnpm-lock.yaml
+.vscode
+*.log
