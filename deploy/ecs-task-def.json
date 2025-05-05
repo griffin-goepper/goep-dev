@@ -31,7 +31,7 @@
         "credentialSpecs": []
       }
     ],
-    "executionRoleArn": "REPLACE_WITH_EXECUTION_ROLE_ARN",
+    "executionRoleArn": "REPLACE_EXECUTION_ROLE",
     "requiresCompatibilities": [
       "FARGATE"
     ],

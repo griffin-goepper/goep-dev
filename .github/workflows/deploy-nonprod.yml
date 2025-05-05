@@ -31,7 +31,11 @@ jobs:
           docker tag goep-dev-nonprod:latest 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
           docker push 026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest
 
-      - name: Fill in the new image ID in the task definition
+      - name: Inject execution role ARN
+        run: |
+          sed -i "s|REPLACE_EXECUTION_ROLE|${{ secrets.ECS_EXECUTION_ROLE_ARN }}|g" deploy/ecs-task-def.json
+
+      - name: Render ECS task definition with new image
         id: render-task
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
@@ -46,4 +50,3 @@ jobs:
           service: goep-dev-nonprod-service
           cluster: goep-dev-cluster
           wait-for-service-stability: true
-
