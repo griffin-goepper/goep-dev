@@ -31,7 +31,7 @@
         "credentialSpecs": []
       }
     ],
-    "executionRoleArn": "REPLACE_EXECUTION_ROLE",
+    "executionRoleArn": "arn:aws:iam::026180161331:role/ecsTaskExecutionRole",
     "requiresCompatibilities": [
       "FARGATE"
     ],
