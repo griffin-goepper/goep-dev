@@ -114,10 +114,10 @@ const projects: Project[] = [
     id: "1",
     title: "Portfolio Redesign",
     description: "A complete redesign of my personal portfolio with Next.js and Tailwind CSS.",
-    image: "/dark-theme-website.png",
+    image: "/goep.png",
     tags: ["Development", "UI/UX", "Next.js"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://goep.dev",
+    githubUrl: "https://github.com/griffin-goepper/goep-dev/tree/main",
   },
   {
     id: "2",
