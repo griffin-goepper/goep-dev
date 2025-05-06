@@ -15,7 +15,7 @@ This project is built with modern web technologies:
 - **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Email**: [Resend](https://resend.com/)
-- **Deployment**: [AWS ECS Fargate](https://aws.amazon.com/fargate/)
+- **Deployment**: [AWS](https://aws.amazon.com/fargate/)
 
 ## Running Locally
 
