@@ -14,6 +14,7 @@ This project is built with modern web technologies:
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Email**: [Resend](https://resend.com/)
 - **Deployment**: [AWS ECS Fargate](https://aws.amazon.com/fargate/)
 
 ## Running Locally
@@ -139,6 +140,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 If you have any questions or suggestions, feel free to reach out:
 
-- Email: @goep.dev@goep.dev
+- Email: griffin@goep.dev
 - GitHub: [griffin-goepper](https://github.com/griffin-goepper)
 - LinkedIn: [Griffin Goepper](https://www.linkedin.com/in/griffin-g-066668171/)
