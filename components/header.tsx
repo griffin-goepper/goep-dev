@@ -80,15 +80,6 @@ export default function Header() {
                     Home
                   </Link>
                   <Link
-                    href="/about"
-                    className={cn(
-                      "text-lg font-medium transition-colors hover:text-primary",
-                      pathname === "/about" ? "text-foreground" : "text-muted-foreground",
-                    )}
-                  >
-                    About
-                  </Link>
-                  <Link
                     href="/projects"
                     className={cn(
                       "text-lg font-medium transition-colors hover:text-primary",
