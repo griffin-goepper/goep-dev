@@ -49,7 +49,7 @@ export default function FeaturedProjects() {
               A community platform for car enthusiasts to share their builds and connect.
             </p>
             <Button asChild>
-              <Link href="/projects/4">
+              <Link href="https://github.com/griffin-goepper/vinme">
                 View Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
