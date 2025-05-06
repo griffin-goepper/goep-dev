@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { name, email, subject, message, token } = body;
 
-  // ✅ 1. Verify Turnstile token
+  // 1. Verify Turnstile token
   const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -19,10 +19,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Failed Turnstile verification" }, { status: 400 });
   }
 
-  // ✅ 2. Send the email
+  // 2. Send the email
   try {
     const data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Contact Form <contact@goep.dev>",
       to: "griffin@goep.dev",
       subject: `[Contact] ${subject}`,
       replyTo: email,
