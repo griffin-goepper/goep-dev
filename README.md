@@ -14,11 +14,12 @@ This project is built with modern web technologies:
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
+- **Email**: [Resend](https://resend.com/)
+- **Deployment**: [AWS ECS Fargate](https://aws.amazon.com/fargate/)
 
 ## Running Locally
 
-Follow these steps to run the project on your local machine:
+### Option 1: Using the Dev Server
 
 1. **Clone the repository**
 
@@ -50,6 +51,37 @@ pnpm dev
 4. **Open your browser**
 
 Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
+
+---
+
+### Option 2: Run with Docker
+
+This app can also be containerized using Docker.
+
+1. **Build the Docker image**
+
+```bash
+docker build -t goep-dev-app .
+```
+
+2. **Run the container**
+
+```bash
+docker run -p 8080:3000 goep-dev-app
+```
+
+> Note: The app listens on port 3000 inside the container, mapped to 8080 on your host.
+
+3. **Visit in browser**
+
+Go to: [http://localhost:8080](http://localhost:8080)
+
+> You must have Docker installed and running on your machine.
+
+4. **Development Note**:  
+   A `.dockerignore` file is included to exclude `node_modules` and other unnecessary files from the build context.
+
+---
 
 ## Project Structure
 
@@ -96,11 +128,9 @@ Most of the content is stored directly in the components. To update:
 
 ## Deployment
 
-This site is deployed on Vercel. To deploy your own version:
+This app is designed for container-based deployment via AWS ECS Fargate. Once containerized, you can push to Amazon ECR and deploy using ECS services with load balancing and pipeline support.
 
-1. Fork this repository
-2. Import the project to Vercel
-3. Deploy
+> See `Dockerfile`, `buildspec.yml`, and infrastructure setup for details.
 
 ## License
 
@@ -110,6 +140,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 If you have any questions or suggestions, feel free to reach out:
 
-- Email: hello@goep.dev
+- Email: griffin@goep.dev
 - GitHub: [griffin-goepper](https://github.com/griffin-goepper)
 - LinkedIn: [Griffin Goepper](https://www.linkedin.com/in/griffin-g-066668171/)

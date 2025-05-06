@@ -1,32 +1,50 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react"
-import Link from "next/link"
+import { useState, useRef } from "react";
+import Turnstile from "react-turnstile";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const turnstileToken = useRef<string>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setFormState("submitting")
-
-    // Simulate form submission
-    setTimeout(() => {
-      setFormState("success")
-    }, 1500)
-  }
+    e.preventDefault();
+    setFormState("submitting");
+  
+    const formData = new FormData(e.currentTarget);
+    const token = turnstileToken.current;
+  
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+        token,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  
+    if (res.ok) {
+      setFormState("success");
+    } else {
+      setFormState("error");
+    }
+  };
+  
 
   return (
     <div className="container max-w-5xl py-12 md:py-24">
       <div className="grid md:grid-cols-2 gap-12">
+        {/* Contact Info Section */}
         <div>
           <h1 className="text-4xl font-bold tracking-tight mb-4">Get in Touch</h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -36,12 +54,9 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold mb-2">Email</h2>
-              <a
-                href="mailto:hello@goep.dev"
-                className="text-muted-foreground hover:text-foreground flex items-center gap-2"
-              >
+              <a href="mailto:griffin@goep.dev" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                hello@goep.dev
+                griffin@goep.dev
               </a>
             </div>
 
@@ -71,6 +86,7 @@ export default function ContactPage() {
           </div>
         </div>
 
+        {/* Contact Form */}
         <Card>
           <CardHeader>
             <CardTitle>Send a Message</CardTitle>
@@ -80,23 +96,30 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your name" required />
+                <Input id="name" name="name" placeholder="Your name" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="your.email@example.com" required />
+                <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What's this about?" required />
+                <Input id="subject" name="subject" placeholder="What's this about?" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Your message..." className="min-h-[120px]" required />
+                <Textarea id="message" name="message" placeholder="Your message..." className="min-h-[120px]" required />
               </div>
+
+              {/* Turnstile Widget */}
+              <Turnstile
+                sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={(token) => (turnstileToken.current = token)}
+                className="my-4"
+              />
 
               <Button type="submit" className="w-full" disabled={formState !== "idle"}>
                 {formState === "idle" && (
@@ -120,5 +143,5 @@ export default function ContactPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

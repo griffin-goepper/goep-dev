@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container flex flex-col md:flex-row items-center justify-between gap-4 md:h-16">
         <div className="text-center md:text-left">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Griffin Goepper. All rights reserved.
+            &copy; {new Date().getFullYear()} goep.dev LLC. All rights reserved.
           </p>
         </div>
 

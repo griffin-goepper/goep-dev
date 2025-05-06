@@ -1,0 +1,41 @@
+{
+    "family": "goep-dev-nonprod-task",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "goep-dev-nonprod-container",
+        "image": "REPLACE_WITH_ECR_IMAGE_URI",
+        "cpu": 0,
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "hostPort": 3000,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true,
+        "entryPoint": [],
+        "command": [],
+        "environment": [],
+        "environmentFiles": [],
+        "mountPoints": [],
+        "volumesFrom": [],
+        "secrets": [],
+        "dnsServers": [],
+        "dnsSearchDomains": [],
+        "extraHosts": [],
+        "dockerSecurityOptions": [],
+        "dockerLabels": {},
+        "ulimits": [],
+        "systemControls": [],
+        "credentialSpecs": []
+      }
+    ],
+    "executionRoleArn": "REPLACE_WITH_EXECUTION_ROLE_ARN",
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+  }
+  

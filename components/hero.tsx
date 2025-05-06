@@ -19,7 +19,6 @@ export default function Hero() {
     "I design intuitive user interfaces.",
     "I build performant web applications.",
     "I enjoy cars.",
-    "I'm passionate about clean, minimal design.",
   ]
 
   const typingRef = useRef<NodeJS.Timeout | null>(null)
@@ -104,8 +103,7 @@ export default function Hero() {
         )}
 
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          I'm a developer and UI designer with a passion for creating beautiful, functional experiences that people love
-          to use.
+          I'm a developer and UI designer with a passion to help you attract new customers, drive sales, grow your business, and keep customers coming back
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
