@@ -9,9 +9,12 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "Griffin Goepper | Developer & UI Designer",
+  title: "goep.dev",
   description:
-    "Personal website of Griffin Goepper, a developer and UI designer with a passion for building beautiful, functional things.",
+    "Personal website of Griffin, a developer and UI designer.",
+  icons: {
+    icon: "/favicon.ico", 
+  },
 }
 
 export default function RootLayout({

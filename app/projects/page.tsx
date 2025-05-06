@@ -144,22 +144,5 @@ const projects: Project[] = [
     tags: ["Development", "UI/UX", "Fun"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com",
-  },
-  {
-    id: "5",
-    title: "Weather App",
-    description: "A minimalist weather application with beautiful visualizations.",
-    image: "/placeholder.svg?key=dwgdm",
-    tags: ["Development", "UI/UX"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "6",
-    title: "Smart Home Controller",
-    description: "Interface design for a smart home control system.",
-    image: "/placeholder.svg?height=300&width=600&query=smart home control interface",
-    tags: ["UI/UX", "Fun"],
-    liveUrl: "https://example.com",
-  },
+  }
 ]

@@ -103,7 +103,7 @@ export default function Hero() {
         )}
 
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          I'm a developer and UI designer with a passion to help you attract new customers, drive sales, grow your business, and keep customers coming back
+          I design and build to attract, convert, and retain customers.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
@@ -111,7 +111,7 @@ export default function Hero() {
             <Link href="/projects">Explore My Work</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/quick-thoughts">Quick Thoughts</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </div>
       </div>
