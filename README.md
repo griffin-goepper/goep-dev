@@ -139,6 +139,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 If you have any questions or suggestions, feel free to reach out:
 
-- Email: hello@goep.dev
+- Email: @goep.dev@goep.dev
 - GitHub: [griffin-goepper](https://github.com/griffin-goepper)
 - LinkedIn: [Griffin Goepper](https://www.linkedin.com/in/griffin-g-066668171/)
