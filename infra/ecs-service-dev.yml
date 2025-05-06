@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: ECS Fargate Service for goep.dev Nonprod
+Description: ECS Fargate Service for goep.dev Nonprod (dedicated ALB version)
 
 Parameters:
   VpcId:
@@ -14,9 +14,19 @@ Parameters:
     Type: String
   AlbSecurityGroupId:
     Type: AWS::EC2::SecurityGroup::Id
-    Description: The security group ID of the Application Load Balancer
 
 Resources:
+  NonprodServiceSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow ALB to reach ECS nonprod task
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+          SourceSecurityGroupId: !Ref AlbSecurityGroupId
+
   GoepDevNonprodService:
     Type: AWS::ECS::Service
     Properties:
@@ -37,14 +47,3 @@ Resources:
         - ContainerName: goep-dev-nonprod-container
           ContainerPort: 3000
           TargetGroupArn: !Ref TargetGroupArn
-
-  NonprodServiceSG:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Allow ALB to reach ECS task on port 3000
-      VpcId: !Ref VpcId
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 3000
-          ToPort: 3000
-          SourceSecurityGroupId: !Ref AlbSecurityGroupId
