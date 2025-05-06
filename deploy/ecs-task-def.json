@@ -4,7 +4,7 @@
     "containerDefinitions": [
       {
         "name": "goep-dev-nonprod-container",
-        "image": "REPLACE_WITH_ECR_IMAGE_URI",
+        "image": "026180161331.dkr.ecr.us-east-1.amazonaws.com/goep-dev-nonprod:nonprod-latest",
         "cpu": 0,
         "portMappings": [
           {
