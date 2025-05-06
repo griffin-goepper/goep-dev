@@ -2,6 +2,7 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY ? "FOUND ✅" : "MISSING ❌");
 
 export async function POST(req: Request) {
     try {
