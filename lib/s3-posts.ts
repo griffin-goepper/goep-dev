@@ -1,15 +1,15 @@
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/client-s3";
 import matter from "gray-matter";
 
-const REGION = process.env.AWS_REGION!;
+const REGION = process.env.AMAZON_REGION!;
 const BUCKET = process.env.S3_BUCKET_NAME!;
 const PREFIX = "quick-thoughts/";
 
 const s3 = new S3Client({
   region: REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+    accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
   },
 });
 
@@ -46,8 +46,7 @@ export async function getAllPosts(): Promise<Post[]> {
   const posts: Post[] = [];
 
   for (const folder of folders) {
-    const slug = folder.replace(PREFIX, "").replace("/", ""); // ✅ Declare slug here
-  
+    const slug = folder.replace(PREFIX, "").replace("/", ""); 
     const key = `${folder}index.mdx`;
   
     try {

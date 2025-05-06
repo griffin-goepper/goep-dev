@@ -19,7 +19,6 @@ export default function Hero() {
     "I design intuitive user interfaces.",
     "I build performant web applications.",
     "I enjoy cars.",
-    "I'm passionate about clean, minimal design.",
   ]
 
   const typingRef = useRef<NodeJS.Timeout | null>(null)
