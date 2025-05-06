@@ -23,7 +23,7 @@ export default function FeaturedProjects() {
       <div className="grid md:grid-cols-2 gap-8">
         <Card className="overflow-hidden hover-lift">
           <div className="aspect-video relative">
-            <Image src="/dark-theme-website.png" alt="Portfolio Redesign" fill className="object-cover" />
+            <Image src="/goep.png" alt="Portfolio Redesign" fill className="object-cover" />
           </div>
           <CardContent className="p-6">
             <h3 className="text-2xl font-bold mb-2">Portfolio Redesign</h3>
@@ -31,7 +31,7 @@ export default function FeaturedProjects() {
               A complete redesign of my personal portfolio with Next.js and Tailwind CSS.
             </p>
             <Button asChild>
-              <Link href="/projects/1">
+              <Link href="https://github.com/griffin-goepper/goep-dev/tree/main">
                 View Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -41,7 +41,7 @@ export default function FeaturedProjects() {
 
         <Card className="overflow-hidden hover-lift">
           <div className="aspect-video relative">
-            <Image src="/placeholder.svg?key=7mqyw" alt="Car Enthusiast Platform" fill className="object-cover" />
+            <Image src="/vinme.png" alt="Car Enthusiast Platform" fill className="object-cover" />
           </div>
           <CardContent className="p-6">
             <h3 className="text-2xl font-bold mb-2">Car Enthusiast Platform</h3>
