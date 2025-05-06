@@ -63,8 +63,8 @@ export default function Skills() {
             <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <Smartphone className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Responsive Design</h3>
-            <p className="text-muted-foreground">Ensuring seamless experiences across all devices and screen sizes.</p>
+            <h3 className="text-xl font-bold mb-2">SEO</h3>
+            <p className="text-muted-foreground">Ensuring seamless business's website and online content, with the goal of improving its search engine rankings.</p>
           </CardContent>
         </Card>
 
