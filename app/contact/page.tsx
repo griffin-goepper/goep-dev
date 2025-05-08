@@ -21,7 +21,7 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget);
     const token = turnstileToken.current;
   
-    const res = await fetch("https://s707luo4w7.execute-api.us-east-1.amazonaws.com/default", {
+    const res = await fetch("https://s707luo4w7.execute-api.us-east-1.amazonaws.com/prod", {
       method: "POST",
       body: JSON.stringify({
         name: formData.get("name"),
