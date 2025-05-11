@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Figma, Laptop, Palette, Server, Smartphone } from "lucide-react"
+import { Code, Kanban, Laptop, Palette, Server, Smartphone } from "lucide-react"
 
 export default function Skills() {
   return (
@@ -49,7 +49,7 @@ export default function Skills() {
         <Card className="hover-lift">
           <CardContent className="p-6 flex flex-col items-center text-center">
             <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-              <Figma className="h-6 w-6 text-primary" />
+              <Kanban className="h-6 w-6 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-2">Project Management</h3>
             <p className="text-muted-foreground">

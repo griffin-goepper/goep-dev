@@ -29,13 +29,22 @@ export default function Header() {
             Home
           </Link>
           <Link
+            href="/services"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              pathname === "/services" ? "text-foreground" : "text-muted-foreground",
+            )}
+          >
+            Services
+          </Link>
+          <Link
             href="/projects"
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
               pathname === "/projects" ? "text-foreground" : "text-muted-foreground",
             )}
           >
-            Projects
+            Portfolio
           </Link>
           <Link
             href="/quick-thoughts"
@@ -80,13 +89,13 @@ export default function Header() {
                     Home
                   </Link>
                   <Link
-                    href="/projects"
+                    href="/services"
                     className={cn(
                       "text-lg font-medium transition-colors hover:text-primary",
                       pathname === "/projects" ? "text-foreground" : "text-muted-foreground",
                     )}
                   >
-                    Projects
+                    Services
                   </Link>
                   <Link
                     href="/quick-thoughts"
