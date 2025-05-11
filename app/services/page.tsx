@@ -218,12 +218,13 @@ function BusinessOwnerView() {
         </div>
 
         <Tabs defaultValue="websites" className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
-            <TabsTrigger value="websites">Websites</TabsTrigger>
-            <TabsTrigger value="social">Social & Email</TabsTrigger>
-            <TabsTrigger value="seo">Local SEO</TabsTrigger>
-            <TabsTrigger value="management">Management</TabsTrigger>
-          </TabsList>
+            <TabsList className="flex overflow-x-auto md:grid md:grid-cols-4 gap-2 mb-8">
+                <TabsTrigger value="websites" className="flex-shrink-0">Websites</TabsTrigger>
+                <TabsTrigger value="social" className="flex-shrink-0">Social & Email</TabsTrigger>
+                <TabsTrigger value="seo" className="flex-shrink-0">Local SEO</TabsTrigger>
+                <TabsTrigger value="management" className="flex-shrink-0">Management</TabsTrigger>
+            </TabsList>
+
 
           <TabsContent value="websites" className="space-y-6">
             <Card>
