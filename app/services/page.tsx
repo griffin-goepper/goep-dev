@@ -98,11 +98,6 @@ function RecruiterView() {
               </div>
             </CardHeader>
             <CardContent>
-              <p>
-                Led a team that reduced cloud infrastructure costs by 32% while improving system reliability and
-                performance. Implemented auto-scaling policies and optimized database queries, resulting in a 45%
-                reduction in average response time.
-              </p>
             </CardContent>
           </Card>
 
@@ -117,11 +112,6 @@ function RecruiterView() {
               </div>
             </CardHeader>
             <CardContent>
-              <p>
-                Spearheaded the migration from a legacy jQuery codebase to a modern Vue.js architecture. Implemented
-                component-based design system that improved developer productivity by 40% and reduced time-to-market for
-                new features by 35%.
-              </p>
             </CardContent>
           </Card>
 
@@ -136,11 +126,6 @@ function RecruiterView() {
               </div>
             </CardHeader>
             <CardContent>
-              <p>
-                Led cross-functional team to achieve SOX and GDPR compliance for a financial services platform.
-                Implemented comprehensive security controls and automated compliance reporting, reducing audit
-                preparation time by 60%.
-              </p>
             </CardContent>
           </Card>
         </div>
