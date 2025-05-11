@@ -47,15 +47,6 @@ export default function Header() {
             Portfolio
           </Link>
           <Link
-            href="/quick-thoughts"
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              pathname === "/quick-thoughts" ? "text-foreground" : "text-muted-foreground",
-            )}
-          >
-            Quick Thoughts
-          </Link>
-          <Link
             href="/contact"
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
@@ -98,13 +89,13 @@ export default function Header() {
                     Services
                   </Link>
                   <Link
-                    href="/quick-thoughts"
+                    href="/projects"
                     className={cn(
                       "text-lg font-medium transition-colors hover:text-primary",
-                      pathname === "/quick-thoughts" ? "text-foreground" : "text-muted-foreground",
+                      pathname === "/projects" ? "text-foreground" : "text-muted-foreground",
                     )}
                   >
-                    Quick Thoughts
+                    Portfolio
                   </Link>
                   <Link
                     href="/contact"
