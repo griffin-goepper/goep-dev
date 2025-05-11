@@ -108,7 +108,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Button asChild size="lg">
-            <Link href="/projects">Explore My Work</Link>
+            <Link href="/services">What I Can Do For You</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
             <Link href="/contact">Contact</Link>
