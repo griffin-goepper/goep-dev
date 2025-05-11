@@ -263,7 +263,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $2,500 • 3-4 weeks delivery</p>
+                <p className="text-sm">Starting at $1,500 • 3-4 weeks delivery</p>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -316,7 +316,7 @@ function BusinessOwnerView() {
               <div className="md:grid md:grid-cols-3 md:gap-6">
                 <div className="relative aspect-video md:aspect-auto md:col-span-1">
                   <Image
-                    src="/placeholder.svg?key=r8sn6"
+                    src="/seo.png"
                     alt="Local SEO"
                     fill
                     className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
@@ -348,7 +348,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $800 • Results typically within 2-3 months</p>
+                <p className="text-sm">Starting at $400 • Results typically within 2-3 months</p>
               </CardFooter>
             </Card>
           </TabsContent>
