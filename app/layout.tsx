@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "goep.dev",
+  title: "goep.dev | Hire your own personal Software Department",
   description:
     "Personal website of Griffin, a developer and UI designer.",
   icons: {
