@@ -83,7 +83,7 @@ export default function Header() {
                     href="/services"
                     className={cn(
                       "text-lg font-medium transition-colors hover:text-primary",
-                      pathname === "/projects" ? "text-foreground" : "text-muted-foreground",
+                      pathname === "/services" ? "text-foreground" : "text-muted-foreground",
                     )}
                   >
                     Services
