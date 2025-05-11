@@ -84,7 +84,7 @@ function RecruiterView() {
         </Card>
       </section>
 
-      <section>
+      {/* <section>
         <h2 className="text-2xl font-bold tracking-tight mb-6">Key Accomplishments</h2>
         <div className="grid gap-6">
           <Card>
@@ -129,7 +129,7 @@ function RecruiterView() {
             </CardContent>
           </Card>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <h2 className="text-2xl font-bold tracking-tight mb-6">Professional Approach</h2>
