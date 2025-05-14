@@ -249,7 +249,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $1,500 • 3-4 weeks delivery</p>
+                <p className="text-sm">3-4 weeks delivery</p>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -292,7 +292,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $1,200 • Ongoing management available</p>
+                <p className="text-sm">Ongoing management available</p>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -334,7 +334,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $400 • Results typically within 2-3 months</p>
+                <p className="text-sm">Results typically within 2-3 months</p>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -376,7 +376,7 @@ function BusinessOwnerView() {
                 </div>
               </div>
               <CardFooter className="bg-muted/50 px-6 py-4">
-                <p className="text-sm">Starting at $150/month • Cancel anytime</p>
+                <p className="text-sm">Cancel anytime</p>
               </CardFooter>
             </Card>
           </TabsContent>
