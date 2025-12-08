@@ -5,6 +5,9 @@ import { Clock, Calendar } from "lucide-react";
 import { getPostBySlug } from "@/lib/s3-posts";
 import { renderMarkdownToHtml } from "@/lib/markdown";
 
+// Force dynamic rendering to avoid build-time S3 access
+export const dynamic = 'force-dynamic';
+
 interface PostPageProps {
   params: {
     slug: string;
