@@ -7,6 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 
+// Force dynamic rendering to avoid build-time S3 access
+export const dynamic = 'force-dynamic';
+
 export default async function QuickThoughtsPage() {
   const posts = await getAllPosts();
 
